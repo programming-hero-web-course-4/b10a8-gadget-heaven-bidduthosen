@@ -1,10 +1,15 @@
 import React from 'react';
 import Banner from '../components/Banner';
+import Gadgets from '../components/Gadgets';
 
 const Home = () => {
     return (
-        <div className='md:min-h-[calc(100svh-100px)]'>
-            <Banner></Banner>
+        <div >
+            <div className='md:min-h-[calc(100svh-100px)] mb-52'>
+                <Banner></Banner>
+
+            </div>
+            <Gadgets></Gadgets>
         </div>
     );
 };

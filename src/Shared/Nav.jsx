@@ -49,7 +49,7 @@ const Nav = () => {
 
                         </ul>
                     </div>
-                    <h2 className='text-2xl font-bold'>Gadget Heaven</h2>
+                    <h2 className='text-2xl font-bold text-white'>Gadget Heaven</h2>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 text-white">

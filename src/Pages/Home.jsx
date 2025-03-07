@@ -7,9 +7,10 @@ const Home = () => {
         <div >
             <div className='md:min-h-[calc(100svh-100px)] mb-52'>
                 <Banner></Banner>
-
             </div>
-            <Gadgets></Gadgets>
+            <div>
+                <Gadgets></Gadgets>
+            </div>
         </div>
     );
 };

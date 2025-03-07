@@ -1,0 +1,222 @@
+[
+  {
+      "id": 1,
+      "product_title": "Dell Inspiron 15",
+      "product_image": "https://greentech.com.bd/image/cache/catalog/inspiron-15-3510-01-550x550.jpg",
+      "category": "Laptop",
+      "price": 550,
+      "description": "A powerful laptop with a sleek design.",
+      "specification": [
+          "15.6 inch",
+          "8GB RAM",
+          "256GB SSD",
+          "Intel i5"
+      ],
+      "availability": true,
+      "rating": 4.5
+  },
+  {
+      "id": 2,
+      "product_title": "HP Pavilion x360",
+      "product_image": "https://www.khancomputers.com.bd/img/2021/02/convertible-14-030-500x500-1.jpg",
+      "category": "Laptop",
+      "price": 600,
+      "description": "Convertible laptop with touchscreen and stylus support.",
+      "specification": [
+          "14 inch",
+          "8GB RAM",
+          "512GB SSD",
+          "Intel i5"
+      ],
+      "availability": true,
+      "rating": 4.2
+  },
+  {
+      "id": 3,
+      "product_title": "Lenovo ThinkPad E15",
+      "product_image": "https://megacomputer.pk/wp-content/uploads/2023/10/Lenovo-thinkpad-E15-G4.webp",
+      "category": "Laptop",
+      "price": 750,
+      "description": "Reliable laptop for business and productivity.",
+      "specification": [
+          "15.6 inch",
+          "16GB RAM",
+          "512GB SSD",
+          "Intel i7"
+      ],
+      "availability": true,
+      "rating": 4.8
+  },
+  {
+      "id": 4,
+      "product_title": "Asus ZenBook 14",
+      "product_image": "https://m.media-amazon.com/images/I/81DkONvgRVL.jpg",
+      "category": "Laptop",
+      "price": 820,
+      "description": "Compact ultrabook with high performance.",
+      "specification": [
+          "14 inch",
+          "16GB RAM",
+          "512GB SSD",
+          "Intel i7"
+      ],
+      "availability": true,
+      "rating": 4.6
+  },
+  {
+      "id": 5,
+      "product_title": "Acer Aspire 5",
+      "product_image": "https://aroz.com.bd/wp-content/uploads/2021/08/Acer-Aspire-5-A514-54-11th-Gen-Core-i5-8-GB-RAM-512-GB-SSD-14-FHD-Laptop-price-in-BD.jpg",
+      "category": "Laptop",
+      "price": 500,
+      "description": "Budget-friendly laptop with solid features.",
+      "specification": [
+          "15.6 inch",
+          "8GB RAM",
+          "256GB SSD",
+          "Intel i5"
+      ],
+      "availability": true,
+      "rating": 4.0
+  },
+  {
+      "id": 6,
+      "product_title": "Apple MacBook Air",
+      "product_image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbookair-og-202402?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1707414684423",
+      "category": "Laptop",
+      "price": 999,
+      "description": "Lightweight and powerful MacBook Air.",
+      "specification": [
+          "13.3 inch",
+          "8GB RAM",
+          "256GB SSD",
+          "Apple M1"
+      ],
+      "availability": true,
+      "rating": 4.9
+  },
+  {
+      "id": 7,
+      "product_title": "Samsung Galaxy S21",
+      "product_image": "https://www.phoneplacekenya.com/wp-content/uploads/2021/03/Samsung-Galaxy-S21-FE-2.jpg",
+      "category": "Phone",
+      "price": 799,
+      "description": "High-end smartphone with excellent camera and performance.",
+      "specification": [
+          "6.2 inch",
+          "128GB Storage",
+          "8GB RAM",
+          "Exynos 2100"
+      ],
+      "availability": true,
+      "rating": 4.7
+  },
+  {
+      "id": 8,
+      "product_title": "Google Pixel 6",
+      "product_image": "https://cdn.dxomark.com/wp-content/uploads/medias/post-96650/Google-Pixel-6-Pro-featured-image-packshot-review-1024x691.jpg",
+      "category": "Phone",
+      "price": 699,
+      "description": "Google's flagship smartphone with exceptional camera.",
+      "specification": [
+          "6.4 inch",
+          "128GB Storage",
+          "8GB RAM",
+          "Google Tensor"
+      ],
+      "availability": true,
+      "rating": 4.6
+  },
+  {
+      "id": 9,
+      "product_title": "JBL Wireless Earbuds",
+      "product_image": "https://diamu.com.bd/wp-content/uploads/2021/12/JBL-Tune-115TWS-True-Wireless-Earbuds.jpg",
+      "category": "Accessories",
+      "price": 120,
+      "description": "Compact wireless earbuds with excellent sound quality.",
+      "specification": [
+          "Bluetooth 5.0",
+          "IPX7 Waterproof",
+          "24-hour battery life"
+      ],
+      "availability": true,
+      "rating": 4.3
+  },
+  {
+      "id": 10,
+      "product_title": "Logitech Wireless Mouse",
+      "product_image": "https://vibegaming.com.bd/wp-content/uploads/2024/05/logitech-m185-wireless-swift-gray-21543383541.webp",
+      "category": "Accessories",
+      "price": 50,
+      "description": "Ergonomic wireless mouse for daily use.",
+      "specification": [
+          "2.4 GHz Wireless",
+          "1000 DPI",
+          "Battery included"
+      ],
+      "availability": true,
+      "rating": 4.1
+  },
+  {
+      "id": 11,
+      "product_title": "Samsung Galaxy Watch 4",
+      "product_image": "https://gadgetz.com.bd/wp-content/uploads/2022/01/galaxy-watch4-silver-.jpg",
+      "category": "Smartwatch",
+      "price": 300,
+      "description": "Smartwatch with health tracking and app support.",
+      "specification": [
+          "1.4 inch",
+          "Bluetooth",
+          "Health Tracking"
+      ],
+      "availability": true,
+      "rating": 4.5
+  },
+  {
+      "id": 12,
+      "product_title": "Apple Watch Series 7",
+      "product_image": "https://mcsolution.com.bd/wp-content/uploads/2022/03/Apple-Watch-Series-7-1200x1452.webp",
+      "category": "Smartwatch",
+      "price": 399,
+      "description": "Advanced smartwatch with fitness and health features.",
+      "specification": [
+          "1.9 inch",
+          "GPS",
+          "Heart Rate Monitor"
+      ],
+      "availability": true,
+      "rating": 4.8
+  },
+  {
+      "id": 13,
+      "product_title": "MacBook Pro 14",
+      "product_image": "https://macfinder.co.uk/product-images/Macbook/A2442/MacBook-Pro-Retina-14-Inch-23934.jpg",
+      "category": "MacBook",
+      "price": 2000,
+      "description": "Powerful laptop with advanced features for professionals.",
+      "specification": [
+          "14 inch",
+          "16GB RAM",
+          "512GB SSD",
+          "M1 Pro Chip"
+      ],
+      "availability": true,
+      "rating": 4.9
+  },
+  {
+      "id": 14,
+      "product_title": "MacBook Air 13",
+      "product_image": "https://macfinder.co.uk/wp-content/uploads/2022/12/img-MacBook-Air-13-Inch-56295.jpg",
+      "category": "MacBook",
+      "price": 1000,
+      "description": "Lightweight MacBook with efficient performance.",
+      "specification": [
+          "13.3 inch",
+          "8GB RAM",
+          "256GB SSD",
+          "Apple M1"
+      ],
+      "availability": true,
+      "rating": 4.8
+  }
+]

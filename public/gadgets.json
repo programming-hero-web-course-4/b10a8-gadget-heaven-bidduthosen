@@ -1,23 +1,27 @@
-[
+
+  [
     {
-      "id": 1,
-      "category": "computers"
+        "id": 1,
+        "category": "Laptop"
     },
     {
-      "id": 2,
-      "category": "phones"
+        "id": 2,
+        "category": "Phone"
     },
     {
-      "id": 3,
-      "category": "smart-watches"
+        "id": 3,
+        "category": "Accessories"
     },
     {
-      "id": 4,
-      "category": "chargers"
+        "id": 4,
+        "category": "Smartwatch"
     },
     {
-      "id": 5,
-      "category": "power-banks"
+        "id": 5,
+        "category": "MacBook"
+    },
+    {
+        "id": 6,
+        "category": "iPhone"
     }
-  ]
-  
+]

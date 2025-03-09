@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FaRegHeart } from "react-icons/fa";
 import { CiShoppingCart } from "react-icons/ci";
 import { Link } from 'react-router-dom';
+import { getCategoryStoredByLocalStorage } from '../Utils/Utils';
 
 
 
@@ -16,7 +17,10 @@ const Nav = () => {
         else if (type === 'statistics') {
             setIsActive(type)
         }
-    }
+    };
+
+    // local storage cart length
+    const setCartLc = getCategoryStoredByLocalStorage()
 
     const links = <>
         <li onClick={() => handleIsACtive('home')} className={`${isActive === 'home' && 'underline text-amber-300'}`}> <Link to={'/'}>Home</Link></li>
@@ -57,7 +61,10 @@ const Nav = () => {
                     </ul>
                 </div>
                 <div className="navbar-end space-x-3">
+                    <div className="indicator">
+                        <span className="indicator-item badge p-2 bg-secondary border-none text-white font-thin text-xs rounded-full ">{setCartLc ? `${setCartLc.length}`: '0'}</span>
                     <div className='bg-white p-2 rounded-full cursor-pointer'><CiShoppingCart size={20} /></div>
+                    </div>
                     <div className='bg-white p-2 rounded-full cursor-pointer'><FaRegHeart size={20} /></div>
                 </div>
             </div>

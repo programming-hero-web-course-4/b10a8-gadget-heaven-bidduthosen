@@ -2,8 +2,8 @@ import React from 'react';
 import { CiCircleRemove } from "react-icons/ci";
 
 
-const DashbordItem = ({ storedCart, wishlist }) => {
-    const { product_title, product_image, price, description, specification } = storedCart || {};
+const DashbordItem = ({ storedCart,handleRemoveCart, wishlist }) => {
+    const { product_title, product_image, price, description } = storedCart || {};
     return (
         <div className='grid grid-cols-12 gap-3 border-2 border-gray-300  p-4 rounded-lg'>
             <div className="col-span-12 lg:col-span-3 ">
@@ -15,7 +15,7 @@ const DashbordItem = ({ storedCart, wishlist }) => {
                 <h4 className='font-semibold text-base'>Price: #{price}</h4>
             </div>
             <div className="col-span-2 flex justify-center items-center">
-                <CiCircleRemove size={40}  className='text-red-400 hover:text-red-700 cursor-pointer'/>
+                <CiCircleRemove onClick={()=> handleRemoveCart(storedCart)} size={40}  className='text-red-400 hover:text-red-700 cursor-pointer'/>
 
             </div>
         </div>

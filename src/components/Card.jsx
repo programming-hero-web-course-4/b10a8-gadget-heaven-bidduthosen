@@ -14,9 +14,6 @@ const Card = ({ category }) => {
                 </div>
                 <Link to={`/categoryDetials/${id}`}><button className="btn btn-outline rounded-3xl card-button">View Details</button></Link>
             </div>
-
-
-
         </div>
     );
 };

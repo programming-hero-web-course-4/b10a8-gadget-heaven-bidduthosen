@@ -14,21 +14,25 @@ const getCategoryStoredByLocalStorage = () => {
 const saveCategoryCartByLocalStorage = (category) => {
     const storedCart = getCategoryStoredByLocalStorage();
     const isExistCart = storedCart.find(cate => cate.id === category.id);
-    console.log(isExistCart)
     if (!isExistCart) {
         storedCart.push(category);
         localStorage.setItem('cart', JSON.stringify(storedCart))
         toast.success('Congress! Add To Cart.')
     }
-    else{
+    else {
         toast.error('Already Exist Cart.')
     }
 };
 
 
 // remove cart by local storage..
+const removeCategoryCartByLocalStorage = (category) => {
+    const storedCart = getCategoryStoredByLocalStorage();
+    const remainCart = storedCart.filter(cart =>cart.id !== category.id);
+
+    localStorage.setItem('cart', JSON.stringify(remainCart))
+}
 
 
 
-
-export {saveCategoryCartByLocalStorage, getCategoryStoredByLocalStorage }
+export { saveCategoryCartByLocalStorage, getCategoryStoredByLocalStorage, removeCategoryCartByLocalStorage }

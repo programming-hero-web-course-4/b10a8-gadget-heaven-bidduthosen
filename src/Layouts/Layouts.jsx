@@ -16,7 +16,7 @@ const Layouts = () => {
             <footer className='max-w-screen-2xl mx-auto px-5 md:px-12'>
                 <Footer></Footer>
             </footer>
-            <Toaster></Toaster>
+            <Toaster position='top-right'></Toaster>
         </>
     );
 };

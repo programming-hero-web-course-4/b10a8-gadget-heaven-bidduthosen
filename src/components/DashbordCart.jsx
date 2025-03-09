@@ -1,10 +1,21 @@
-import React from 'react';
-import { getCategoryStoredByLocalStorage } from '../Utils/Utils';
+import React, { useEffect, useState } from 'react';
+import { getCategoryStoredByLocalStorage, removeCategoryCartByLocalStorage } from '../Utils/Utils';
 import DashbordItem from './DashbordItem';
 
 const DashbordCart = () => {
-    const storedCartsLc = getCategoryStoredByLocalStorage()
-    console.log(storedCartsLc)
+    const [savedCarts, setSavedCarts] = useState([]);
+    useEffect(()=>{
+        const storedCartsLc = getCategoryStoredByLocalStorage()
+        setSavedCarts(storedCartsLc)
+        
+    },[])
+    
+    
+    const handleRemoveCart = (storedCart) =>{
+        removeCategoryCartByLocalStorage(storedCart)
+        const remainCartLc = getCategoryStoredByLocalStorage()
+        setSavedCarts(remainCartLc)
+    }
     return (
         <div>
             <div className='md:flex justify-between py-10'>
@@ -17,7 +28,7 @@ const DashbordCart = () => {
             </div>
             <div className='mb-10 grid grid-cols-1 md:grid-cols-2 gap-5'>
                 {
-                    storedCartsLc?.map(storedCart => <DashbordItem key={storedCart.id} storedCart={storedCart}></DashbordItem>)
+                    savedCarts?.map(storedCart => <DashbordItem key={storedCart.id} storedCart={storedCart} handleRemoveCart={handleRemoveCart}></DashbordItem>)
                 }
             </div>
         </div>

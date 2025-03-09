@@ -20,7 +20,7 @@ const Nav = () => {
 
     const links = <>
         <li onClick={() => handleIsACtive('home')} className={`${isActive === 'home' && 'underline text-amber-300'}`}> <Link to={'/'}>Home</Link></li>
-        <li onClick={() => handleIsACtive('statistics')} className={`${isActive === 'statistics' && 'underline text-amber-300'}`}><Link to={'/dashbord'}>Statistics</Link></li>
+        <li onClick={() => handleIsACtive('statistics')} className={`${isActive === 'statistics' && 'underline text-amber-300'}`}><Link to={'/statistics'}>Statistics</Link></li>
         <li onClick={() => handleIsACtive('dashbord')} className={`${isActive === 'dashbord' && 'underline text-amber-300'}`}><Link to={'/dashbord'}>Dashbord</Link></li>
     </>
     return (

@@ -1,31 +1,18 @@
-import React, { useState } from 'react';
 import { FaRegHeart } from "react-icons/fa";
 import { CiShoppingCart } from "react-icons/ci";
-import { Link } from 'react-router-dom';
-import { getCategoryStoredByLocalStorage } from '../Utils/Utils';
+import {  NavLink, useLocation } from 'react-router-dom';
 
 
 
 const Nav = () => {
-    const [isActive, setIsActive] = useState('home');
-    const handleIsACtive = (type) => {
-        if (type === 'home') {
-            setIsActive(type)
-        } else if (type === 'dashbord') {
-            setIsActive(type)
-        }
-        else if (type === 'statistics') {
-            setIsActive(type)
-        }
-    };
-
-    // local storage cart length
-    const setCartLc = getCategoryStoredByLocalStorage()
+    const {pathname}  = useLocation();
 
     const links = <>
-        <li onClick={() => handleIsACtive('home')} className={`${isActive === 'home' && 'underline text-amber-300'}`}> <Link to={'/'}>Home</Link></li>
-        <li onClick={() => handleIsACtive('statistics')} className={`${isActive === 'statistics' && 'underline text-amber-300'}`}><Link to={'/statistics'}>Statistics</Link></li>
-        <li onClick={() => handleIsACtive('dashbord')} className={`${isActive === 'dashbord' && 'underline text-amber-300'}`}><Link to={'/dashbord'}>Dashbord</Link></li>
+        <li> <NavLink to={'/'} className={({isActive})=>`font-bold ${isActive? 'btn  btn-secondary font-extrabold': ''}`}>Home</NavLink> </li>
+        <li> <NavLink to={'/statistics'} className={({isActive})=>`font-bold ${isActive? 'btn  btn-secondary font-extrabold': ''}`}>Statistics</NavLink> </li>
+        <li> <NavLink to={'/dashbord'} className={({isActive})=>`font-bold ${isActive? 'btn  btn-secondary font-extrabold': ''}`}>Dashbord</NavLink> </li>
+
+        {/* <li onClick={() => handleIsACtive('dashbord')} className={`${isActive === 'dashbord' && 'underline text-amber-300'}`}><Link to={'/dashbord'}>Dashbord</Link></li>  */}
     </>
     return (
         <div className='max-w-screen-2xl mx-auto px-2 md:px-12'>
@@ -53,19 +40,22 @@ const Nav = () => {
 
                         </ul>
                     </div>
-                    <h2 className='text-2xl font-bold text-white'>Gadget Heaven</h2>
+                    <h2 className={`text-2xl font-bold ${pathname === '/dashbord' || pathname === "/statistics" ? 'text-black': 'text-white'}`}>Gadget Heaven</h2>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1 text-white">
+                    <ul className="menu menu-horizontal px-1 text-black">
                         {links}
                     </ul>
                 </div>
                 <div className="navbar-end space-x-3">
                     <div className="indicator">
-                        <span className="indicator-item badge p-2 bg-secondary border-none text-white font-thin text-xs rounded-full ">{setCartLc ? `${setCartLc.length}`: '0'}</span>
-                    <div className='bg-white p-2 rounded-full cursor-pointer'><CiShoppingCart size={20} /></div>
+                        <span className="indicator-item badge p-2 bg-secondary border-none text-white font-thin text-xs rounded-full ">0</span>
+                        <div className='bg-white p-2 rounded-full cursor-pointer'><CiShoppingCart size={20} /></div>
                     </div>
-                    <div className='bg-white p-2 rounded-full cursor-pointer'><FaRegHeart size={20} /></div>
+                    <div className="indicator">
+                        <span className="indicator-item badge p-2 bg-secondary border-none text-white font-thin text-xs rounded-full ">0</span>
+                        <div className='bg-white p-2 rounded-full cursor-pointer'><FaRegHeart size={20} /></div>
+                    </div>
                 </div>
             </div>
         </div>

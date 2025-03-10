@@ -7,11 +7,13 @@ import CategoryDetails from "../components/CategoryDetails";
 import Statistics from "../Pages/Statistics";
 import DashbordCart from "../components/DashbordCart";
 import DashbordWishlist from "../components/DashbordWishlist";
+import ErrorPage from "../components/ErrorPage";
 
 const routes = createBrowserRouter([
     {
         path: '/',
         element: <Layouts></Layouts>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/',

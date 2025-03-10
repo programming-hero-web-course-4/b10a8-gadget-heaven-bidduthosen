@@ -3,7 +3,7 @@ import { useLoaderData, useParams } from 'react-router-dom';
 import Heading from '../Shared/Heading';
 import { PiShoppingCartSimple } from "react-icons/pi";
 import { CiHeart } from "react-icons/ci";
-import {  saveCategoryCartByLocalStorage } from '../Utils/Utils';
+import {  saveCategoryCartByLocalStorage, saveWishlistByLC } from '../Utils/Utils';
 
 
 
@@ -20,6 +20,10 @@ const CategoryDetails = () => {
 
     const handleCategoryCart = (categoryDetail) =>{
         saveCategoryCartByLocalStorage(categoryDetail)
+    }
+    
+    const handleWishlist = (categoryDetail) =>{
+        saveWishlistByLC(categoryDetail)
     }
 
     const { product_title, product_image, price, description, specification } = categoryDetail || {};
@@ -57,7 +61,7 @@ const CategoryDetails = () => {
                         </div>
                         <div className='flex gap-5 items-center pt-5'>
                             <button onClick={()=> handleCategoryCart(categoryDetail)} className='btn btn-outline rounded-full hover:bg-[#9538E2]  hover:text-white'><span>Add To Cart</span> <PiShoppingCartSimple size={20} /></button>
-                            <div className='p-2 border border-gray-400 hover:border-gray-600 rounded-full hover:bg-gray-200 cursor-pointer'>
+                            <div onClick={()=> handleWishlist(categoryDetail)} className='p-2 border border-gray-400 hover:border-gray-600 rounded-full hover:bg-gray-200 cursor-pointer'>
                                 <CiHeart size={20}/>
                             </div>
                         </div>

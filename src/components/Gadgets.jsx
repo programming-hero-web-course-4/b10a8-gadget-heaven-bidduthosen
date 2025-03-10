@@ -1,6 +1,5 @@
 import React from 'react';
 import {  NavLink, Outlet, useLoaderData } from 'react-router-dom';
-import './Gadgets.css'
 
 const Gadgets = () => {
     const gadgets = useLoaderData()
@@ -10,7 +9,7 @@ const Gadgets = () => {
             <div className='grid grid-cols-12 gap-8'>
                 <div className='col-span-12 md:col-span-3 flex flex-col gap-4 bg-gray-100 p-4  md:p-10 rounded-xl'>
                     {
-                        gadgets.map(gadget=> <NavLink to={`/category/${gadget.category}`} className={'border border-[#9538E2] ps-7 py-3 rounded-full hover:bg-[#9538E2] hover:text-white ease-in-out'} key={gadget?.id}>{gadget.category} </NavLink>)
+                        gadgets.map(gadget=> <NavLink to={`/category/${gadget.category}`} className={({isActive})=>`border border-[#9538E2] ps-7 py-3 rounded-full hover:bg-[#9538E2] hover:text-white ease-in-out ${isActive ? 'bg-[#9538E2] text-white': ''}`} key={gadget?.id}>{gadget.category} </NavLink>)
                     }
                 </div>
                 <div className='col-span-12 md:col-span-9'>
